@@ -30,10 +30,16 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
+import org.hibernate.annotations.Comment;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import agenda.modelo.Contacto;
 import agenda.negocio.Agenda;
 import agenda.negocio.AgendaImpl;
 
+
+@Component
 public class VInicial extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private String separadorPrincipal=";", separadorSecundario="/";
@@ -63,7 +69,9 @@ public class VInicial extends JFrame {
 	private int ELIMINAR = 3;
 	int filaActualTabla;
 	
-	private Agenda agenda = new AgendaImpl();
+	
+	@Autowired
+	private Agenda agenda ;
 
 	public VInicial() {
 		super("Agenda de Contactos");

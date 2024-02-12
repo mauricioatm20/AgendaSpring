@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>es.cursogetafe</groupId>
-  <artifactId>A18_AgendaV2</artifactId>
+  <artifactId>A24_AgendaV3</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>A18_AgendaV2</name>
-  <description>A simple A18_AgendaV2.</description>
+  <name>A24_AgendaV3</name>
+  <description>A simple A24_AgendaV3.</description>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -49,6 +49,20 @@
     	<groupId>com.mysql</groupId>
     	<artifactId>mysql-connector-j</artifactId>
     	<version>8.3.0</version>
+	</dependency>
+	    	    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.3.31</version>
+	</dependency>
+	<!--	ANOTACIONES JavaEE-->
+	
+	    <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+	<dependency>
+	    <groupId>javax.annotation</groupId>
+	    <artifactId>javax.annotation-api</artifactId>
+	    <version>1.3.2</version>
 	</dependency>
 	
   </dependencies>

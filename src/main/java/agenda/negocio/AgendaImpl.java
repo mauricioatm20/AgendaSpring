@@ -11,24 +11,25 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import agenda.modelo.Contacto;
 import agenda.persistencia.ContactoDao;
 import agenda.persistencia.ContactoDaoJPA;
 
 
-
+@Service
 public class AgendaImpl implements Agenda {
 
+	@Autowired
 	private ContactoDao cDao;
 
-	
-	public AgendaImpl(ContactoDao cDao) {
-		this.cDao = cDao;
-	}
-	
 	public AgendaImpl() {
-		cDao = new ContactoDaoJPA();
+		
 	}
+	
+	
 //*****************************************************************************	
 	@Override
 	public void insertarContacto(Contacto c) {
@@ -150,5 +151,5 @@ public class AgendaImpl implements Agenda {
 		}
 		return datos;
 	}
-//devuelve un lista de array de string
+
 }

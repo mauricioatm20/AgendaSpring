@@ -1,24 +1,19 @@
 package agenda.inicio;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import agenda.config.EMF;
 import agenda.vista.MenuPrincipal;
 import agenda.vista.swing.VInicial;
 
+
+
 public class Main {
+	
 	public static void main(String[] args) {
-		String tipoVista = "grafico";
-		if (args.length == 1)
-			tipoVista = args[0];
 		
-		switch (tipoVista) {
-		case "consola":
-			new MenuPrincipal().menu();
-			break;
-		case "grafico":
-			new VInicial();
-			break;
-		default:
-			new VInicial();
-			break;
-		}
+		new AnnotationConfigApplicationContext(EMF.class);
+		
 	}
+
 }
