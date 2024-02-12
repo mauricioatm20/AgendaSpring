@@ -1,17 +1,26 @@
 package agenda.vista;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
+
 import agenda.negocio.Agenda;
 import agenda.negocio.AgendaImpl;
 import util.Util;
 
+@Component
+@Profile("consola")
 public class MenuPrincipal {
-	
+	@Autowired
 	private Agenda agenda;
 	
 	public MenuPrincipal() {
-		agenda = new AgendaImpl();// ESTO ME GENERA UN DEPENDENCIA
+
 	}
 	
+	@PostConstruct
 	public void menu() {
 		System.out.println("SUPER AGENDA XX 7 PLUS");
 		System.out.println("----------------------");

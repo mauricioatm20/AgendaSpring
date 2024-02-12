@@ -32,6 +32,7 @@ import javax.swing.table.DefaultTableModel;
 
 import org.hibernate.annotations.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import agenda.modelo.Contacto;
@@ -40,6 +41,7 @@ import agenda.negocio.AgendaImpl;
 
 
 @Component
+@Profile({"grafico", "default"})
 public class VInicial extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private String separadorPrincipal=";", separadorSecundario="/";

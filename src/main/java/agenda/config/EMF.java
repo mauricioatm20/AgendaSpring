@@ -9,11 +9,13 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ComponentScan(basePackages = {
+@ComponentScan (basePackages = {
 		"agenda.persistencia",
 		"agenda.negocio",
-		"agenda.vista"
+		"agenda.vista",
+		"agenda.vista.swing"
 	})
+
 public class EMF {
 		
 		@Bean
